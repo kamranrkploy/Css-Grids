@@ -1,0 +1,29 @@
+/* repeat property used in this file*/
+.grid{
+    display: grid;
+
+    /* here 12 columns will be created one after the another of 30px then 70px then 30px and so on...
+    [small] and [large] are names given to small and large columns*/
+    grid-template: 100px 100px 100px
+    / repeat(6 , [small] 30px [large] 70px);
+
+}
+
+.grid div:nth-child(1){
+    grid-column: 1 / span 12;
+}
+.grid div:nth-child(2){
+    grid-column: small 3 / large 5 ;
+}
+.grid div:nth-child(3){
+    grid-column: auto / span 6;
+}
+.grid div:nth-child(4){
+    grid-column: auto / span 6;
+}
+.grid div:nth-child(5){
+    grid-column: auto / span 6;
+}
+.grid div:nth-child(6){
+    grid-column: auto / span 6;
+} 

@@ -2,33 +2,28 @@
 .grid{
     display: grid;
 
-    /* grid-template-rows: 100px 160px;
-    grid-template-columns: 100px auto 150px; */
+    /* here 12 columns will be created one after the another of 30px then 70px then 30px and so on...
+    [small] and [large] are names given to small and large columns*/
+    grid-template: 100px 100px 100px
+    / repeat(6 , [small] 30px [large] 70px);
 
-    /*ALternative way for defining templates */
-    /*Creating a grid containing two rows and three columns*/
-    grid-template: [row1-start] 100px [row1-end row2-start] 160px [row2-end]
-    / 100px 160px auto;
-    grid-gap:10px 10px;
+}
 
+.grid div:nth-child(1){
+    grid-column: 1 / span 12;
 }
 .grid div:nth-child(2){
-    order: 1; /*elements with lower order are displayed first , by default each element order is equal to zero.*/
+    grid-column: small 3 / large 5 ;
 }
-
-/* .grid div:nth-child(3){
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 2;
+.grid div:nth-child(3){
+    grid-column: auto / span 6;
 }
-
+.grid div:nth-child(4){
+    grid-column: auto / span 6;
+}
+.grid div:nth-child(5){
+    grid-column: auto / span 6;
+}
 .grid div:nth-child(6){
-    grid-row: row1-start / row1-end; /*this is equivalent to ( 1 / 2 )*//* 
-    grid-column: 2/3;
-}
-
-.grid div:nth-child(1)
-{
-    grid-row: auto / span 2;
-} */
+    grid-column: auto / span 6;
+} 
