@@ -1,0 +1,19 @@
+/* fr property and minmax implementation*/
+.grid{
+    display: grid;
+
+    /*dont confuse yourself by doing something silly for example :
+    you have 6 grid items so don't define grid-template where rows*columns becomes greater than 6*/
+  
+    /* grid-template: 100px 200px 300px
+    / 2fr 6fr; */
+
+    /* grid-template-rows: 165px 200px 111px;
+    grid-template-columns: 200px 200px 200px; */
+
+    /* for example in this case we have used 3 different height for all items but as we are using single column to distribute each items ,
+    the first value from row will be set as height for each item*/
+      grid-template: 100px 200px 300px
+    / repeat(6 , minmax(100px ,1fr));
+
+}
