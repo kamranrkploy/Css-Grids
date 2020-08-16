@@ -7,6 +7,7 @@
 
 } */
 
+/* in the below code i recommend you to replace auto-fit with auto-fill to know the difference between the two yourself*/
 .grid{
     display: grid;
       grid-template: 100px 200px 300px
