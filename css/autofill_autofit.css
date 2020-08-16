@@ -1,8 +1,16 @@
 /*Autofill and Autofill properties*/
+/* .grid{
+    display: grid;
+      grid-template: 100px 200px 300px */
+      /* it considers the max value here*/
+    /* / repeat(auto-fill , minmax(100px , 200px));
+
+} */
+
 .grid{
     display: grid;
       grid-template: 100px 200px 300px
       /* it considers the max value here*/
-    / repeat(auto-fill , minmax(100px , 200px));
+    / repeat(auto-fit , minmax(100px , 1fr));
 
 }
