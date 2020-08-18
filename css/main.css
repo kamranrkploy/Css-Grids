@@ -6,5 +6,5 @@
       grid-template: 100px 100px 100px
     / repeat(auto-fit ,200px );
 
-     justify-items: stretch; /*use stretch , start and end and see the change by inspecting elements in the browser*/
+     align-items: start; /*use stretch , start and end and see the change by inspecting elements in the browser*/
 }

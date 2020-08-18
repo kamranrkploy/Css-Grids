@@ -1,0 +1,12 @@
+/* justify-items and aligning props */
+
+.grid{
+    display: grid;
+    grid-gap: 10px;
+      grid-template: 100px 100px 100px
+    / repeat(auto-fit ,200px );
+
+   /*use stretch , start and end and see the change by inspecting elements in the browser*/
+   /* justify-items: stretch;  */
+     align-items: stretch; 
+    }
